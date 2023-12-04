@@ -45,7 +45,7 @@ body {
     margin-bottom: 20px;
   }
   
- .image-section {
+.image-section {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
@@ -62,9 +62,10 @@ body {
     }
 
     .image-container img {
-      width: 100%;
+      width: auto; /* Allow the width to adjust to maintain aspect ratio */
       height: 100%;
-      object-fit: cover; /* You can use 'cover' or 'contain' based on your preference */
+      display: block; /* Remove extra spacing under the image */
+      margin: 0 auto; /* Center the image horizontally */
     }
   
 
