@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Vm252 Debugger</title>
 
-  <!-- Bootstrap CSS -->
+ 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css"> <!-- Link to the separated CSS file -->
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const dropdown = document.getElementById("imageDropdown");
+  const images = document.querySelectorAll(".image-container");
+
+
+  images.forEach(image => {
+    image.style.display = "none";
+  });
+
+ 
+  dropdown.value = "image1";
+
+
+  const selectedImage = dropdown.value;
+  const selectedImageContainer = document.getElementById(selectedImage);
+  selectedImageContainer.style.display = "block";
+
+  dropdown.addEventListener("change", function () {
+    const selectedImage = dropdown.value;
+
+    images.forEach(image => {
+      image.style.display = "none";
+    });
+
+    const selectedImageContainer = document.getElementById(selectedImage);
+    selectedImageContainer.style.display = "block";
+  });
+});
+  </script>
 </head>
 <body>
 
-  <!-- Navigation -->
+
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="index.html">Vm252 Debugger</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,65 +60,65 @@
         <li class="nav-item active">
           <a class="nav-link" href="index.html">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Phase1.html">Phase 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Phase2.html">Phase 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Phase3.html">Phase 3</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="images.html">Images</a>
-          </li>
+       
       </ul>
     </div>
   </nav>
-   <div class="image-grid">
-    <div class="image-container">
-      <figure>
-        <img src="images/originalgui.png" alt="Image 1">
-        <figcaption>Original GUI as of Phase 1</figcaption>
-      </figure>
+
+  <div class="content">
+   
+    <div class="form-group">
+      <label for="imageDropdown">Select Image:</label>
+      <select class="form-control" id="imageDropdown">
+        <option value="image1">Phase 1 - Original GUI plan</option>
+        <option value="image2">Phase 2 - Updated GUI</option>
+        <option value="image3">Phase 3 - GUI after alterations from Prof Zaring</option>
+        <option value="image4">Phase 3 - File opener</option>
+        <option value="image5">Phase 3 - Display File</option>
+     
+      </select>
     </div>
 
-    <div class="image-container">
-      <figure>
-        <img src="image2.jpg" alt="Image 2">
-        <figcaption>Caption for Image 2</figcaption>
-      </figure>
-    </div>
+  
+    <div class="image-grid d-flex justify-content-center">
+      <div class="image-container" id="image1">
+        <figure>
+          <img src="images/originalgui.png" alt="Image 1">
+          <figcaption>Original GUI as of Phase 1</figcaption>
+        </figure>
+      </div>
 
-    <div class="image-container">
-      <figure>
-        <img src="image3.jpg" alt="Image 3">
-        <figcaption>Caption for Image 3</figcaption>
-      </figure>
-    </div>
+      <div class="image-container" id="image2">
+        <figure>
+          <img src="images/phase2gui.png" alt="Image 2">
+          <figcaption> Updated GUI</figcaption>
+        </figure>
+      </div>
 
-    <div class="image-container">
-      <figure>
-        <img src="image4.jpg" alt="Image 4">
-        <figcaption>Caption for Image 4</figcaption>
-      </figure>
-    </div>
+      <div class="image-container" id="image3">
+        <figure>
+          <img src="images/phase3gui.png" alt="Image 3">
+          <figcaption>Phase 3 GUI after alterations from Prof Zaring</figcaption>
+        </figure>
+      </div>
 
-    <div class="image-container">
-      <figure>
-        <img src="image5.jpg" alt="Image 5">
-        <figcaption>Caption for Image 5</figcaption>
-      </figure>
-    </div>
+      <div class="image-container" id="image4">
+        <figure>
+          <img src="images/phase3open.png" alt="Image 4">
+          <figcaption>Phase 3 file opener</figcaption>
+        </figure>
+      </div>
 
-    <div class="image-container">
-      <figure>
-        <img src="image6.jpg" alt="Image 6">
-        <figcaption>Caption for Image 6</figcaption>
-      </figure>
+      <div class="image-container" id="image5">
+        <figure>
+          <img src="images/phase3display.png" alt="Image 5">
+          <figcaption>Phase 3 display opened file in text box</figcaption>
+        </figure>
+      </div>
+
     </div>
   </div>
-  <!-- Bootstrap JS and dependencies -->
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
