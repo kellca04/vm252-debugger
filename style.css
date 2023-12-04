@@ -45,7 +45,7 @@ body {
     margin-bottom: 20px;
   }
   
-.image-section {
+ .image-section {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
@@ -54,7 +54,7 @@ body {
     }
 
     .image-container {
-      width: 100%;
+      width: calc(100% + 15px); /* Make the div 15px wider than the image */
       box-sizing: border-box;
       overflow: hidden; /* Ensure the entire image is displayed */
       border: 1px solid #ddd; /* Add a border for styling */
@@ -67,6 +67,12 @@ body {
       display: block; /* Remove extra spacing under the image */
       margin: 0 auto; /* Center the image horizontally */
     }
+
+    .image-container figcaption {
+      text-align: center;
+      margin: 10px 0;
+      font-style: italic;
+      color: #777;
   
 
 
