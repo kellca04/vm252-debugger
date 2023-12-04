@@ -45,17 +45,20 @@ body {
     margin-bottom: 20px;
   }
   
-  .image-section {
+ .image-section {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
-      gap: 10px; /* Adjust the gap between images as needed */
+      gap: 20px; /* Adjust the gap between images as needed */
       height: 100vh; /* 100% of the viewport height */
     }
 
     .image-container {
       width: 100%;
       box-sizing: border-box;
+      overflow: hidden; /* Ensure the entire image is displayed */
+      border: 1px solid #ddd; /* Add a border for styling */
+      border-radius: 8px; /* Optional: Add border-radius for rounded corners */
     }
 
     .image-container img {
