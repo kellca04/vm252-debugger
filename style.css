@@ -44,18 +44,16 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+.page-layout {
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
 }
 
 .image-container {
   border: 1px solid #ccc;
   padding: 10px;
-  max-width: 300px; /* Set a maximum width for the container */
+  width: 35%; /* Adjust the width as needed */
   text-align: center; /* Center the content within the container */
 }
 
@@ -75,7 +73,5 @@ figcaption {
   margin-top: 10px;
   color: #555;
 }
-
-
 
   
