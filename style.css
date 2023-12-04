@@ -55,6 +55,11 @@ body {
   padding: 10px;
   width: 35%; /* Adjust the width as needed */
   text-align: center; /* Center the content within the container */
+  margin-right: 5%; /* Add a gap on the right side of the image container */
+}
+
+.image-container:last-child {
+  margin-right: 0; /* Remove the margin on the last image container */
 }
 
 figure {
