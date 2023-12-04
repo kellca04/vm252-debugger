@@ -45,35 +45,33 @@ body {
     margin-bottom: 20px;
   }
   
- .image-section {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 20px; /* Adjust the gap between images as needed */
-      height: 100vh; /* 100% of the viewport height */
-    }
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
 
-    .image-container {
-      width: calc(100% + 15px); /* Make the div 15px wider than the image */
-      box-sizing: border-box;
-      overflow: hidden; /* Ensure the entire image is displayed */
-      border: 1px solid #ddd; /* Add a border for styling */
-      border-radius: 8px; /* Optional: Add border-radius for rounded corners */
-    }
+.image-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
 
-    .image-container img {
-      width: auto; /* Allow the width to adjust to maintain aspect ratio */
-      height: 100%;
-      display: block; /* Remove extra spacing under the image */
-      margin: 0 auto; /* Center the image horizontally */
-    }
+figure {
+  margin: 0;
+}
 
-    .image-container figcaption {
-      text-align: center;
-      margin: 10px 0;
-      font-style: italic;
-      color: #777;
-  
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  text-align: center;
+  margin-top: 10px;
+  color: #555;
+}
 
 
 
