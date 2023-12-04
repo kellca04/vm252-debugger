@@ -75,5 +75,16 @@ body {
     margin-top: 10px;
   }
 
+.image-section {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-gap: 1rem; /* This will create a gap around each of the image containers */
+ max-height: 20%; /* This will set the max height of the image container to 20% */
+}
+
+.image-container {
+ overflow: hidden; /* This will hide any content that exceeds the max height */
+}
+
 
   
